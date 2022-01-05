@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "Vpb9kRWqZb44jg5dWM4vAK6BaMnUqbKcnPDcmq2XPdE1Mkg4jJ8s38KLN4ccx1VQfcHKPhcDTPIsczZj8oB4lw==",
+  "success": true,
+  "projectFilePath": "C:\\Projetos\\PaymentContext\\PaymentContext.Domain\\PaymentContext.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
