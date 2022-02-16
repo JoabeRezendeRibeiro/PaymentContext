@@ -1,44 +1,41 @@
 using System.Collections.Generic;
 using System.Linq;
+using PaymentContext.Domain.ValueObjects;
+using PaymentContext.Shared.Entities;
 
 namespace PaymentContext.Domain.Entities
 {
-public class Student
-{
-    private IList<Subscription> _subscriptions;
-        public Student(string fistName, string lastName, string document, string email)
+    public class Student : Entity
+    {
+        private IList<Subscription> _subscriptions;
+        public Student(Name name, Document document, Email email)
         {
-            FistName = fistName;
-            LastName = lastName;
+            Name = name;
             Document = document;
             Email = email;
             _subscriptions = new List<Subscription>();
-        
-            
         }
 
-    public string FistName { get; private set; }
+        public Name Name { get; private set; }
 
-    public string LastName { get; private set; }
+        public Document Document { get; private set; }
 
-    public string Document { get; private set; }
-    
-    public string Email { get; private set; }
+        public Email Email { get; private set; }
 
-    public string Adress { get; private set; }
+        public Adress Adress { get; private set; }
 
-    public IReadOnlyCollection<Subscription> Subscriptions {get { return _subscriptions.ToArray();}}
+        public IReadOnlyCollection<Subscription> Subscriptions { get { return _subscriptions.ToArray(); } }
 
-    public void AddSubscripition(Subscription subscription)
-    {
-        // Se tiver uma assinatura ativa cancela
-        // Cancela todas as outras de deixa essa como principal
-        foreach(var sub in Subscriptions)
-            sub.Inactivate();
+        public void AddSubscripition(Subscription subscription)
+        {
+            // Se tiver uma assinatura ativa cancela
+            // Cancela todas as outras de deixa essa como principal
+            foreach (var sub in Subscriptions)
+                sub.Inactivate();
 
-        _subscriptions.Add(subscription);
+            _subscriptions.Add(subscription);
+        }
+
     }
-
-}
 
 }
