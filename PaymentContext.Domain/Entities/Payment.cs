@@ -3,7 +3,7 @@ using PaymentContext.Domain.ValueObjects;
 
 namespace PaymentContext.Domain.Entities
 {
-    public abstract class Payment
+    public abstract class Payment 
     {
         protected Payment(
         DateTime paiddate, 
