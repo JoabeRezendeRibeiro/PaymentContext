@@ -1,1 +1,1 @@
-estude de Domain Driven Desing com muito esforço
+Estudo de Domain Driven Desing com muito esforço
